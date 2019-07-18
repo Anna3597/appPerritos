@@ -3,6 +3,10 @@ const bodyParser = require('body-parser');
 const moongose = require('mongoose');
 const mongoURL='mongodb+srv://annalau:5h2ikMuxkjyCKWcp@cluster0-crkgf.mongodb.net/test?retryWrites=true&w=majority' ;
 const {Perrito} = require('./models/perrito');
+const cors = require('cors')
+
+
+app.use(cors());
 
 moongose.connect(mongoURL, {useNewUrlParser: true}, (err)=>{
     if(!err){
