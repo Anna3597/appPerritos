@@ -15,11 +15,10 @@ const app= express();
 
 app.use(bodyParser.urlencoded({extended:true}));  
 app.use(bodyParser.json());
-/*
-app.get('/',(request,respond)=>{        //ruta principal
-    respond.send('<h1> express y mongo</h1>');
+
+app.get('/',(request,respond)=>{
+    respond.send('<h1> ejercicio </h1>');
 });
-*/
 
 app.post('/new/perrito',(req,res)=>{
     const params= req.body;
