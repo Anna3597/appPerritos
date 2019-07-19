@@ -6,7 +6,7 @@ const {Perrito} = require('./models/perrito');
 const cors = require('cors')
 
 
-app.use(cors());
+
 
 moongose.connect(mongoURL, {useNewUrlParser: true}, (err)=>{
     if(!err){
@@ -19,6 +19,8 @@ const app= express();
 
 app.use(bodyParser.urlencoded({extended:true}));  
 app.use(bodyParser.json());
+
+app.use(cors());
 
 app.get('/',(request,respond)=>{
     respond.send('<h1> ejercicio </h1>');
